@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -26,10 +27,8 @@ public class MainScreen extends JPanel {
         Font myFont = null;
         try {
             myFont = Font.createFont(Font.TRUETYPE_FONT,
-                    new File(ClassLoader.getSystemResource("Res/Fipps.otf").toURI())).deriveFont(90f);
+                    ClassLoader.getSystemResourceAsStream("Res/Fipps.otf")).deriveFont(90f);
             ge.registerFont(myFont);
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
         } catch (FontFormatException e) {
             e.printStackTrace();
         } catch (IOException e) {

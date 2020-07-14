@@ -13,7 +13,7 @@ public class Game extends JPanel implements KeyListener, Runnable {
     private boolean ending;
     private boolean starting = true;
     private int t;
-    private int finalScore = 1;
+    private int finalScore = 5;
     private final int userRenderTime;
 
 
